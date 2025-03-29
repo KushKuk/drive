@@ -1,5 +1,5 @@
 <robot name="drive">
-  <link name="base">
+  <link name="base_link">
     <inertial>
       <origin xyz="0.0813975388640472 0.349730166585041 0.745233391827634" rpy="0 0 0" />
       <mass value="12.720238406316" />
@@ -49,7 +49,7 @@
 
   <joint name="bogie_front_left_joint" type="continuous">
     <origin xyz="-0.43217 -1.0151 0" rpy="3.1416 0 1.4079" />
-    <parent link="base" />
+    <parent link="base_link" />
     <child link="bogie_front_left" />
     <axis xyz="0 0 1" />
   </joint>
@@ -111,7 +111,7 @@
 
   <joint name="bogie_middle_left_joint" type="continuous">
     <origin xyz="0.13025 -1.0151 0" rpy="-3.1416 0 1.5708" />
-    <parent link="base" />
+    <parent link="base_link" />
     <child link="bogie_middle_left" />
     <axis xyz="0 0 1" />
   </joint>
@@ -173,7 +173,7 @@
 
   <joint name="rocker_left_joint" type="continuous">
     <origin xyz="0.56095 -0.97013 -0.019803" rpy="3.1158 0 1.5708" />
-    <parent link="base" />
+    <parent link="base_link" />
     <child link="rocker_left" />
     <axis xyz="0 0 1" />
   </joint>
@@ -235,7 +235,7 @@
 
   <joint name="bogie_front_right_joint" type="continuous">
     <origin xyz="-0.43066 -0.47513 -0.0023177" rpy="3.1416 0 -1.5708" />
-    <parent link="base" />
+    <parent link="base_link" />
     <child link="bogie_front_right" />
     <axis xyz="0 0 1" />
   </joint>
@@ -297,7 +297,7 @@
 
   <joint name="bogie_middle_right_joint" type="continuous">
     <origin xyz="0.13176 -0.47513 -0.0023177" rpy="-2.4656 0 -1.5708" />
-    <parent link="base" />
+    <parent link="base_link" />
     <child link="bogie_middle_right" />
     <axis xyz="0 0.6257 0.78007" />
   </joint>
@@ -359,7 +359,7 @@
 
   <joint name="rocker_right_joint" type="continuous">
     <origin xyz="0.565118575030691 -0.520131514258346 -0.0143396560229379" rpy="3.10403771392678 0 -1.5708" />
-    <parent link="base" />
+    <parent link="base_link" />
     <child link="rocker_right" />
     <axis xyz="0 0.075039277255456 -0.997180578866726" />
   </joint>
@@ -424,7 +424,7 @@
   </link>
 
   <joint name="lidar_joint" type="fixed">
-    <parent link="base"/>
+    <parent link="base_link"/>
     <child link="lidar_link"/>
     <origin xyz="0.3 0 0.2" rpy="0 0 0"/>
   </joint>
@@ -454,7 +454,7 @@
   </link>
 
   <joint name="imu_joint" type="fixed">
-    <parent link="base"/>
+    <parent link="base_link"/>
     <child link="imu_link"/>
     <origin xyz="0 0 0.1" rpy="0 0 0"/>
   </joint>
