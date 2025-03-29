@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'bogie_front_left', 'wheel_1', 'bogie_middle_left', 'wheel_2', 'rocker_left', 'wheel_3', 'bogie_front_right', 'wheel_4', 'bogie_middle_right', 'wheel_5', 'rocker_right', 'wheel_6', ]
