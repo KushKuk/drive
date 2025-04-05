@@ -7,8 +7,9 @@ from launch.actions import DeclareLaunchArgument
 from launch_ros.actions import Node
 
 def generate_launch_description():
+    # Paths inside the drive package
     drive_share_dir = get_package_share_directory('drive')
-    urdf_file = os.path.join(drive_share_dir, 'urdf', 'drive.urdf')
+    urdf_file = os.path.join(drive_share_dir, 'models', 'drive', 'urdf', 'drive.urdf')
     rviz_config_file = os.path.join(drive_share_dir, 'urdf.rviz')
 
     return LaunchDescription([

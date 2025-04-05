@@ -9,7 +9,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/base.STL" />
+        <mesh filename="package://drive/meshes/base.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -18,7 +18,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/base.STL" />
+        <mesh filename="package://drive/meshes/base.stl" />
       </geometry>
     </collision>
   </link>
@@ -33,7 +33,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/bogie_front_left.STL" />
+        <mesh filename="package://drive/meshes/bogie_front_left.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -42,7 +42,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/bogie_front_left.STL" />
+        <mesh filename="package://drive/meshes/bogie_front_left.stl" />
       </geometry>
     </collision>
   </link>
@@ -64,7 +64,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_1.STL" />
+        <mesh filename="package://drive/meshes/wheel_1.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -73,7 +73,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_1.STL" />
+        <mesh filename="package://drive/meshes/wheel_1.stl" />
       </geometry>
     </collision>
   </link>
@@ -95,7 +95,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/bogie_middle_left.STL" />
+        <mesh filename="package://drive/meshes/bogie_middle_left.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -104,7 +104,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/bogie_middle_left.STL" />
+        <mesh filename="package://drive/meshes/bogie_middle_left.stl" />
       </geometry>
     </collision>
   </link>
@@ -126,7 +126,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_2.STL" />
+        <mesh filename="package://drive/meshes/wheel_2.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -135,7 +135,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_2.STL" />
+        <mesh filename="package://drive/meshes/wheel_2.stl" />
       </geometry>
     </collision>
   </link>
@@ -157,7 +157,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/rocker_left.STL" />
+        <mesh filename="package://drive/meshes/rocker_left.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -166,7 +166,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/rocker_left.STL" />
+        <mesh filename="package://drive/meshes/rocker_left.stl" />
       </geometry>
     </collision>
   </link>
@@ -188,7 +188,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_3.STL" />
+        <mesh filename="package://drive/meshes/wheel_3.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -197,7 +197,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_3.STL" />
+        <mesh filename="package://drive/meshes/wheel_3.stl" />
       </geometry>
     </collision>
   </link>
@@ -219,7 +219,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/bogie_front_right.STL" />
+        <mesh filename="package://drive/meshes/bogie_front_right.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -228,7 +228,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/bogie_front_right.STL" />
+        <mesh filename="package://drive/meshes/bogie_front_right.stl" />
       </geometry>
     </collision>
   </link>
@@ -250,7 +250,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_4.STL" />
+        <mesh filename="package://drive/meshes/wheel_4.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -259,7 +259,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_4.STL" />
+        <mesh filename="package://drive/meshes/wheel_4.stl" />
       </geometry>
     </collision>
   </link>
@@ -281,7 +281,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/bogie_middle_right.STL" />
+        <mesh filename="package://drive/meshes/bogie_middle_right.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -290,7 +290,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/bogie_middle_right.STL" />
+        <mesh filename="package://drive/meshes/bogie_middle_right.stl" />
       </geometry>
     </collision>
   </link>
@@ -312,7 +312,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_5.STL" />
+        <mesh filename="package://drive/meshes/wheel_5.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -321,7 +321,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_5.STL" />
+        <mesh filename="package://drive/meshes/wheel_5.stl" />
       </geometry>
     </collision>
   </link>
@@ -343,7 +343,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/rocker_right.STL" />
+        <mesh filename="package://drive/meshes/rocker_right.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -352,7 +352,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/rocker_right.STL" />
+        <mesh filename="package://drive/meshes/rocker_right.stl" />
       </geometry>
     </collision>
   </link>
@@ -374,7 +374,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_6.STL" />
+        <mesh filename="package://drive/meshes/wheel_6.stl" />
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -383,7 +383,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://drive/meshes/wheel_6.STL" />
+        <mesh filename="package://drive/meshes/wheel_6.stl" />
       </geometry>
     </collision>
   </link>
@@ -409,7 +409,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://drive/meshes/lidar.STL" scale="1 1 1"/>
+        <mesh filename="package://drive/meshes/lidar.stl" scale="1 1 1"/>
       </geometry>
       <material name="">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -418,7 +418,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://drive/meshes/lidar.STL" scale="1 1 1"/>
+        <mesh filename="package://drive/meshes/lidar.stl" scale="1 1 1"/>
       </geometry>
     </collision>
   </link>

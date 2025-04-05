@@ -1,14 +1,18 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.10)
 project(drive)
 
 find_package(ament_cmake REQUIRED)
+find_package(rclpy REQUIRED)
+find_package(xacro REQUIRED)
 
 install(
-  DIRECTORY config launch meshes urdf
+  DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
 )
 
-install(DIRECTORY meshes/
-  DESTINATION share/${PROJECT_NAME}/meshes)
+install(
+  DIRECTORY models/
+  DESTINATION share/${PROJECT_NAME}/models
+)
 
 ament_package()
