@@ -1,463 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
 <robot name="drive">
-  <link name="base_link">
-    <inertial>
-      <origin xyz="0.0813975388640472 0.349730166585041 0.745233391827634" rpy="0 0 0" />
-      <mass value="12.720238406316" />
-      <inertia ixx="0.261391224287362" ixy="0.00262186748821055" ixz="1.91697306700848E-16"
-               iyy="0.843990123685326" iyz="5.10428306001413E-17" izz="0.664922609272974" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/base.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/base.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <link name="bogie_front_left">
-    <inertial>
-      <origin xyz="0.0129852901860572 -3.88578058618805E-16 0.0657298216350096" rpy="0 0 0" />
-      <mass value="0.245029467362339" />
-      <inertia ixx="0.000481938208354005" ixy="2.91379333855479E-19" ixz="2.30185129071683E-05"
-               iyy="0.000539038649100082" iyz="1.60956143365272E-18" izz="0.000142438687060036" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/bogie_front_left.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/bogie_front_left.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="bogie_front_left_joint" type="continuous">
-    <origin xyz="-0.43217 -1.0151 0" rpy="3.1416 0 1.4079" />
-    <parent link="base_link" />
-    <child link="bogie_front_left" />
-    <axis xyz="0 0 1" />
-  </joint>
-
-  <link name="wheel_1">
-    <inertial>
-      <origin xyz="5.55111512312578E-17 -0.0225000000000002 -4.9960036108132E-16" rpy="0 0 0" />
-      <mass value="0.969966731795851" />
-      <inertia ixx="0.00180858380199435" ixy="-6.87790753170492E-19" ixz="-3.21872519956634E-20"
-               iyy="0.00321301479907376" iyz="-3.52365706057789E-19" izz="0.00180858380199435" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_1.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_1.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="wheel_1_joint" type="continuous">
-    <origin xyz="0 0 0.11198" rpy="3.1416 1.3751 1.5708" />
-    <parent link="bogie_front_left" />
-    <child link="wheel_1" />
-    <axis xyz="0 1 0" />
-  </joint>
-
-  <link name="bogie_middle_left">
-    <inertial>
-      <origin xyz="0.0129852901860572 -2.77555756156289E-17 0.0657298216350098" rpy="0 0 0" />
-      <mass value="0.245029467362339" />
-      <inertia ixx="0.000481938208354005" ixy="3.57721817984611E-20" ixz="2.30185129071682E-05"
-               iyy="0.000539038649100082" iyz="2.20773017023231E-20" izz="0.000142438687060036" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/bogie_middle_left.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/bogie_middle_left.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="bogie_middle_left_joint" type="continuous">
-    <origin xyz="0.13025 -1.0151 0" rpy="-3.1416 0 1.5708" />
-    <parent link="base_link" />
-    <child link="bogie_middle_left" />
-    <axis xyz="0 0 1" />
-  </joint>
-
-  <link name="wheel_2">
-    <inertial>
-      <origin xyz="-2.77555756156289E-17 -0.0225000000000002 0" rpy="0 0 0" />
-      <mass value="0.969966731795849" />
-      <inertia ixx="0.00180858380199434" ixy="7.49357438781787E-20" ixz="0"
-               iyy="0.00321301479907375" iyz="-6.58844981459226E-21" izz="0.00180858380199434" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_2.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_2.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="wheel_2_joint" type="continuous">
-    <origin xyz="0 0 0.111977638143316" rpy="0 0 -1.5708" />
-    <parent link="bogie_middle_left" />
-    <child link="wheel_2" />
-    <axis xyz="0 1 0" />
-  </joint>
-
-  <link name="rocker_left">
-    <inertial>
-      <origin xyz="0.0129852911708225 1.11022302462516E-16 0.0661603898916332" rpy="0 0 0" />
-      <mass value="0.245029467362339" />
-      <inertia ixx="0.000481938209039244" ixy="4.07634570525163E-21" ixz="2.30185078538829E-05"
-               iyy="0.000539038649100083" iyz="-4.63750538921162E-20" izz="0.000142438686374797" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/rocker_left.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/rocker_left.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="rocker_left_joint" type="continuous">
-    <origin xyz="0.56095 -0.97013 -0.019803" rpy="3.1158 0 1.5708" />
-    <parent link="base_link" />
-    <child link="rocker_left" />
-    <axis xyz="0 0 1" />
-  </joint>
-
-  <link name="wheel_3">
-    <inertial>
-      <origin xyz="-2.22044604925031E-16 0.0225 1.60982338570648E-15" rpy="0 0 0" />
-      <mass value="0.969966731795849" />
-      <inertia ixx="0.00180858380199434" ixy="-1.7309010163403E-19" ixz="0"
-               iyy="0.00321301479907375" iyz="-1.01193372727594E-19" izz="0.00180858380199434" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_3.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_3.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="wheel_3_joint" type="continuous">
-    <origin xyz="0 0 0.112408206593219" rpy="0 0 1.5708" />
-    <parent link="rocker_left" />
-    <child link="wheel_3" />
-    <axis xyz="0 1 0" />
-  </joint>
-
-  <link name="bogie_front_right">
-    <inertial>
-      <origin xyz="0.0129852901860573 -1.11022302462516E-16 0.0662521834916939" rpy="0 0 0" />
-      <mass value="0.245029467362339" />
-      <inertia ixx="0.000481938208354006" ixy="-2.62275912106055E-20" ixz="2.30185129071678E-05"
-               iyy="0.000539038649100083" iyz="3.50614081294898E-19" izz="0.000142438687060036" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/bogie_front_right.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/bogie_front_right.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="bogie_front_right_joint" type="continuous">
-    <origin xyz="-0.43066 -0.47513 -0.0023177" rpy="3.1416 0 -1.5708" />
-    <parent link="base_link" />
-    <child link="bogie_front_right" />
-    <axis xyz="0 0 1" />
-  </joint>
-
-  <link name="wheel_4">
-    <inertial>
-      <origin xyz="1.66533453693773E-16 -0.0225 -1.11022302462516E-16" rpy="0 0 0" />
-      <mass value="0.969966731795849" />
-      <inertia ixx="0.00180858380199434" ixy="-4.01879759813685E-19" ixz="0"
-               iyy="0.00321301479907375" iyz="-6.68853722148441E-20" izz="0.00180858380199434" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_4.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_4.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="wheel_4_joint" type="continuous">
-    <origin xyz="0 0 0.1125" rpy="0 0 -1.5708" />
-    <parent link="bogie_front_right" />
-    <child link="wheel_4" />
-    <axis xyz="0 1 0" />
-  </joint>
-
-  <link name="bogie_middle_right">
-    <inertial>
-      <origin xyz="0.0129852891007725 0.0414537955768247 0.0516810862683572" rpy="0 0 0" />
-      <mass value="0.245029467362338" />
-      <inertia ixx="0.000481938207599867" ixy="1.44026196203906E-05" ixz="1.79559667118559E-05"
-               iyy="0.000383771035147503" iyz="-0.000193574527611515" izz="0.000297706301766753" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/bogie_middle_right.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/bogie_middle_right.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="bogie_middle_right_joint" type="continuous">
-    <origin xyz="0.13176 -0.47513 -0.0023177" rpy="-2.4656 0 -1.5708" />
-    <parent link="base_link" />
-    <child link="bogie_middle_right" />
-    <axis xyz="0 0.6257 0.78007" />
-  </joint>
-
-  <link name="wheel_5">
-    <inertial>
-      <origin xyz="-1.11022302462516E-16 -0.0225 -2.77555756156289E-16" rpy="0 0 0" />
-      <mass value="0.969966731795849" />
-      <inertia ixx="0.00180858380199434" ixy="-7.7153903575784E-20" ixz="-1.62630325872826E-19"
-               iyy="0.00321301479907375" iyz="-4.01591574199174E-20" izz="0.00180858380199434" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_5.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_5.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="wheel_5_joint" type="continuous">
-    <origin xyz="0 0.0703909178023914 0.0877574423677957" rpy="0 0 -1.5708" />
-    <parent link="bogie_middle_right" />
-    <child link="wheel_5" />
-    <axis xyz="0 1 0" />
-  </joint>
-
-  <link name="rocker_right">
-    <inertial>
-      <origin xyz="0.0129852901860573 -0.0049569707122793 0.0658721019855867" rpy="0 0 0" />
-      <mass value="0.245029467362339" />
-      <inertia ixx="0.000481938208354006" ixy="-1.72729257204929E-06" ixz="2.29536140254208E-05"
-               iyy="0.000536805437098068" iyz="2.96766669183117E-05" izz="0.000144671899062051" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/rocker_right.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/rocker_right.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="rocker_right_joint" type="continuous">
-    <origin xyz="0.565118575030691 -0.520131514258346 -0.0143396560229379" rpy="3.10403771392678 0 -1.5708" />
-    <parent link="base_link" />
-    <child link="rocker_right" />
-    <axis xyz="0 0.075039277255456 -0.997180578866726" />
-  </joint>
-
-  <link name="wheel_6">
-    <inertial>
-      <origin xyz="-2.22044604925031E-16 0.0225 -1.11022302462516E-16" rpy="0 0 0" />
-      <mass value="0.969966731795848" />
-      <inertia ixx="0.00180858380199434" ixy="-3.00981713702323E-20" ixz="0"
-               iyy="0.00321301479907375" iyz="2.86816342322797E-20" izz="0.00180858380199434" />
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_6.stl" />
-      </geometry>
-      <material name="">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <mesh filename="package://drive/meshes/wheel_6.stl" />
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="wheel_6_joint" type="continuous">
-    <origin xyz="0 -0.00842737343770561 0.111989526422662" rpy="3.1416 -0.6966 -1.5708" />
-    <parent link="rocker_right" />
-    <child link="wheel_6" />
-    <axis xyz="0 1 0" />
-  </joint>
-
-  <!-- =================================================== -->
-  <!-- Added Sensor Definitions -->
-  <!-- =================================================== -->
-
-  <!-- LIDAR Sensor -->
-<link name="lidar">
-  <visual>
-    <geometry>
-      <cylinder radius="0.05" length="0.1"/>
-    </geometry>
-    <material>
-      <color rgba="0.1 0.1 0.1 1"/>
-    </material>
-  </visual>
-  <collision>
-    <geometry>
-      <cylinder radius="0.05" length="0.1"/>
-    </geometry>
-  </collision>
-  <inertial>
-    <mass value="0.5"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
-    <inertia 
-      ixx="0.001" ixy="0.0" ixz="0.0"
-      iyy="0.001" iyz="0.0"
-      izz="0.001"/>
-  </inertial>
+<link name="base_link">
+<inertial>
+<!-- <origin rpy="0 0 0" xyz="0.0813975388640472 0.349730166585041 0.745233391827634"/> -->
+<origin rpy="0 0 0" xyz="0 0 0.2"/>
+<mass value="12.720238406316"/>
+<inertia ixx="0.261391224287362" ixy="0.00262186748821055" ixz="1.91697306700848E-16" iyy="0.843990123685326" iyz="5.10428306001413E-17" izz="0.664922609272974"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/base.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/base.stl"/>
+</geometry>
+</collision>
 </link>
-
-<joint name="lidar_joint" type="fixed">
-  <parent link="base_link"/>
-  <child link="lidar"/>
-  <origin xyz="0 0 0.3" rpy="0 0 0"/>
+<link name="bogie_front_left">
+<inertial>
+<origin rpy="0 0 0" xyz="0.0129852901860572 -3.88578058618805E-16 0.0657298216350096"/>
+<mass value="0.245029467362339"/>
+<inertia ixx="0.000481938208354005" ixy="2.91379333855479E-19" ixz="2.30185129071683E-05" iyy="0.000539038649100082" iyz="1.60956143365272E-18" izz="0.000142438687060036"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/bogie_front_left.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/bogie_front_left.stl"/>
+</geometry>
+</collision>
+</link>
+<joint name="bogie_front_left_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="3.1416 0 1.4079" xyz="-0.43217 -1.0151 0"/>
+<parent link="base_link"/>
+<child link="bogie_front_left"/>
+<axis xyz="0 0 1"/>
 </joint>
-
-
-  <!-- IMU Sensor -->
-  <link name="imu_link">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.2"/>
-      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.05 0.05 0.05"/>
-      </geometry>
-      <material name="">
-        <color rgba="0 0 1 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.05 0.05 0.05"/>
-      </geometry>
-    </collision>
-  </link>
-
-  <joint name="imu_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="imu_link"/>
-    <origin xyz="0 0 0.1" rpy="0 0 0"/>
-  </joint>
+<link name="wheel_1">
+<inertial>
+<origin rpy="0 0 0" xyz="5.55111512312578E-17 -0.0225000000000002 -4.9960036108132E-16"/>
+<mass value="0.969966731795851"/>
+<inertia ixx="0.00180858380199435" ixy="-6.87790753170492E-19" ixz="-3.21872519956634E-20" iyy="0.00321301479907376" iyz="-3.52365706057789E-19" izz="0.00180858380199435"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/wheel_1.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<cylinder length="0.04" radius="0.06"/>
+</geometry>
+<surface>
+<friction>
+<ode mu="1.0" mu2="1.0"/>
+</friction>
+</surface>
+</collision>
+</link>
+<joint name="wheel_1_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="3.1416 1.3751 1.5708" xyz="0 0 0.11198"/>
+<parent link="bogie_front_left"/>
+<child link="wheel_1"/>
+<axis xyz="0 1 0"/>
+</joint>
+<link name="bogie_middle_left">
+<inertial>
+<origin rpy="0 0 0" xyz="0.0129852901860572 -2.77555756156289E-17 0.0657298216350098"/>
+<mass value="0.245029467362339"/>
+<inertia ixx="0.000481938208354005" ixy="3.57721817984611E-20" ixz="2.30185129071682E-05" iyy="0.000539038649100082" iyz="2.20773017023231E-20" izz="0.000142438687060036"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/bogie_middle_left.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/bogie_middle_left.stl"/>
+</geometry>
+</collision>
+</link>
+<joint name="bogie_middle_left_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="-3.1416 0 1.5708" xyz="0.13025 -1.0151 0"/>
+<parent link="base_link"/>
+<child link="bogie_middle_left"/>
+<axis xyz="0 0 1"/>
+</joint>
+<link name="wheel_2">
+<inertial>
+<origin rpy="0 0 0" xyz="-2.77555756156289E-17 -0.0225000000000002 0"/>
+<mass value="0.969966731795849"/>
+<inertia ixx="0.00180858380199434" ixy="7.49357438781787E-20" ixz="0" iyy="0.00321301479907375" iyz="-6.58844981459226E-21" izz="0.00180858380199434"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/wheel_2.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<cylinder length="0.04" radius="0.06"/>
+</geometry>
+<surface>
+<friction>
+<ode mu="1.0" mu2="1.0"/>
+</friction>
+</surface>
+</collision>
+</link>
+<joint name="wheel_2_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="0 0 -1.5708" xyz="0 0 0.111977638143316"/>
+<parent link="bogie_middle_left"/>
+<child link="wheel_2"/>
+<axis xyz="0 1 0"/>
+</joint>
+<link name="rocker_left">
+<inertial>
+<origin rpy="0 0 0" xyz="0.0129852911708225 1.11022302462516E-16 0.0661603898916332"/>
+<mass value="0.245029467362339"/>
+<inertia ixx="0.000481938209039244" ixy="4.07634570525163E-21" ixz="2.30185078538829E-05" iyy="0.000539038649100083" iyz="-4.63750538921162E-20" izz="0.000142438686374797"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/rocker_left.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/rocker_left.stl"/>
+</geometry>
+</collision>
+</link>
+<joint name="rocker_left_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="3.1158 0 1.5708" xyz="0.56095 -0.97013 -0.019803"/>
+<parent link="base_link"/>
+<child link="rocker_left"/>
+<axis xyz="0 0 1"/>
+</joint>
+<link name="wheel_3">
+<inertial>
+<origin rpy="0 0 0" xyz="-2.22044604925031E-16 0.0225 1.60982338570648E-15"/>
+<mass value="0.969966731795849"/>
+<inertia ixx="0.00180858380199434" ixy="-1.7309010163403E-19" ixz="0" iyy="0.00321301479907375" iyz="-1.01193372727594E-19" izz="0.00180858380199434"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/wheel_3.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<cylinder length="0.04" radius="0.06"/>
+</geometry>
+<surface>
+<friction>
+<ode mu="1.0" mu2="1.0"/>
+</friction>
+</surface>
+</collision>
+</link>
+<joint name="wheel_3_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="0 0 1.5708" xyz="0 0 0.112408206593219"/>
+<parent link="rocker_left"/>
+<child link="wheel_3"/>
+<axis xyz="0 1 0"/>
+</joint>
+<link name="bogie_front_right">
+<inertial>
+<origin rpy="0 0 0" xyz="0.0129852901860573 -1.11022302462516E-16 0.0662521834916939"/>
+<mass value="0.245029467362339"/>
+<inertia ixx="0.000481938208354006" ixy="-2.62275912106055E-20" ixz="2.30185129071678E-05" iyy="0.000539038649100083" iyz="3.50614081294898E-19" izz="0.000142438687060036"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/bogie_front_right.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/bogie_front_right.stl"/>
+</geometry>
+</collision>
+</link>
+<joint name="bogie_front_right_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="3.1416 0 -1.5708" xyz="-0.43066 -0.47513 -0.0023177"/>
+<parent link="base_link"/>
+<child link="bogie_front_right"/>
+<axis xyz="0 0 1"/>
+</joint>
+<link name="wheel_4">
+<inertial>
+<origin rpy="0 0 0" xyz="1.66533453693773E-16 -0.0225 -1.11022302462516E-16"/>
+<mass value="0.969966731795849"/>
+<inertia ixx="0.00180858380199434" ixy="-4.01879759813685E-19" ixz="0" iyy="0.00321301479907375" iyz="-6.68853722148441E-20" izz="0.00180858380199434"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/wheel_4.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<cylinder length="0.04" radius="0.06"/>
+</geometry>
+<surface>
+<friction>
+<ode mu="1.0" mu2="1.0"/>
+</friction>
+</surface>
+</collision>
+</link>
+<joint name="wheel_4_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="0 0 -1.5708" xyz="0 0 0.1125"/>
+<parent link="bogie_front_right"/>
+<child link="wheel_4"/>
+<axis xyz="0 1 0"/>
+</joint>
+<link name="bogie_middle_right">
+<inertial>
+<origin rpy="0 0 0" xyz="0.0129852891007725 0.0414537955768247 0.0516810862683572"/>
+<mass value="0.245029467362338"/>
+<inertia ixx="0.000481938207599867" ixy="1.44026196203906E-05" ixz="1.79559667118559E-05" iyy="0.000383771035147503" iyz="-0.000193574527611515" izz="0.000297706301766753"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/bogie_middle_right.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/bogie_middle_right.stl"/>
+</geometry>
+</collision>
+</link>
+<joint name="bogie_middle_right_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="-2.4656 0 -1.5708" xyz="0.13176 -0.47513 -0.0023177"/>
+<parent link="base_link"/>
+<child link="bogie_middle_right"/>
+<axis xyz="0 0.6257 0.78007"/>
+</joint>
+<link name="wheel_5">
+<inertial>
+<origin rpy="0 0 0" xyz="-1.11022302462516E-16 -0.0225 -2.77555756156289E-16"/>
+<mass value="0.969966731795849"/>
+<inertia ixx="0.00180858380199434" ixy="-7.7153903575784E-20" ixz="-1.62630325872826E-19" iyy="0.00321301479907375" iyz="-4.01591574199174E-20" izz="0.00180858380199434"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/wheel_5.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<cylinder length="0.04" radius="0.06"/>
+</geometry>
+<surface>
+<friction>
+<ode mu="1.0" mu2="1.0"/>
+</friction>
+</surface>
+</collision>
+</link>
+<joint name="wheel_5_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="0 0 -1.5708" xyz="0 0.0703909178023914 0.0877574423677957"/>
+<parent link="bogie_middle_right"/>
+<child link="wheel_5"/>
+<axis xyz="0 1 0"/>
+</joint>
+<link name="rocker_right">
+<inertial>
+<origin rpy="0 0 0" xyz="0.0129852901860573 -0.0049569707122793 0.0658721019855867"/>
+<mass value="0.245029467362339"/>
+<inertia ixx="0.000481938208354006" ixy="-1.72729257204929E-06" ixz="2.29536140254208E-05" iyy="0.000536805437098068" iyz="2.96766669183117E-05" izz="0.000144671899062051"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/rocker_right.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/rocker_right.stl"/>
+</geometry>
+</collision>
+</link>
+<joint name="rocker_right_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="3.10403771392678 0 -1.5708" xyz="0.565118575030691 -0.520131514258346 -0.0143396560229379"/>
+<parent link="base_link"/>
+<child link="rocker_right"/>
+<axis xyz="0 0.075039277255456 -0.997180578866726"/>
+</joint>
+<link name="wheel_6">
+<inertial>
+<origin rpy="0 0 0" xyz="-2.22044604925031E-16 0.0225 -1.11022302462516E-16"/>
+<mass value="0.969966731795848"/>
+<inertia ixx="0.00180858380199434" ixy="-3.00981713702323E-20" ixz="0" iyy="0.00321301479907375" iyz="2.86816342322797E-20" izz="0.00180858380199434"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<mesh filename="package://drive/meshes/wheel_6.stl"/>
+</geometry>
+<material name="">
+<color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<cylinder length="0.04" radius="0.06"/>
+</geometry>
+<surface>
+<friction>
+<ode mu="1.0" mu2="1.0"/>
+</friction>
+</surface>
+</collision>
+</link>
+<joint name="wheel_6_joint" type="continuous">
+<dynamics damping="0.1"/> 
+<origin rpy="3.1416 -0.6966 -1.5708" xyz="0 -0.00842737343770561 0.111989526422662"/>
+<parent link="rocker_right"/>
+<child link="wheel_6"/>
+<axis xyz="0 1 0"/>
+</joint>
+<!-- =================================================== -->
+<!-- Added Sensor Definitions -->
+<!-- =================================================== -->
+<!-- LIDAR Sensor -->
+<link name="lidar">
+<visual>
+<geometry>
+<cylinder length="0.1" radius="0.05"/>
+</geometry>
+<material>
+<color rgba="0.1 0.1 0.1 1"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<cylinder length="0.1" radius="0.05"/>
+</geometry>
+</collision>
+<inertial>
+<mass value="0.5"/>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+</inertial>
+</link>
+<joint name="lidar_joint" type="fixed">
+<parent link="base_link"/>
+<child link="lidar"/>
+<origin rpy="0 0 0" xyz="0 0 0.3"/>
+</joint>
+<!-- IMU Sensor -->
+<link name="imu_link">
+<inertial>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<mass value="0.2"/>
+<inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+</inertial>
+<visual>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<box size="0.05 0.05 0.05"/>
+</geometry>
+<material name="">
+<color rgba="0 0 1 1"/>
+</material>
+</visual>
+<collision>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<geometry>
+<box size="0.05 0.05 0.05"/>
+</geometry>
+</collision>
+</link>
+<joint name="imu_joint" type="fixed">
+<parent link="base_link"/>
+<child link="imu_link"/>
+<origin rpy="0 0 0" xyz="0 0 0.1"/>
+</joint>
 </robot>
