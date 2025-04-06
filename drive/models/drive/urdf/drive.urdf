@@ -400,34 +400,36 @@
   <!-- =================================================== -->
 
   <!-- LIDAR Sensor -->
-  <link name="lidar_link">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="0.5"/>
-      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="package://drive/meshes/lidar.stl" scale="1 1 1"/>
-      </geometry>
-      <material name="">
-        <color rgba="0.5 0.5 0.5 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <mesh filename="package://drive/meshes/lidar.stl" scale="1 1 1"/>
-      </geometry>
-    </collision>
-  </link>
+<link name="lidar">
+  <visual>
+    <geometry>
+      <cylinder radius="0.05" length="0.1"/>
+    </geometry>
+    <material>
+      <color rgba="0.1 0.1 0.1 1"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <cylinder radius="0.05" length="0.1"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <mass value="0.5"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia 
+      ixx="0.001" ixy="0.0" ixz="0.0"
+      iyy="0.001" iyz="0.0"
+      izz="0.001"/>
+  </inertial>
+</link>
 
-  <joint name="lidar_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="lidar_link"/>
-    <origin xyz="0.3 0 0.2" rpy="0 0 0"/>
-  </joint>
+<joint name="lidar_joint" type="fixed">
+  <parent link="base_link"/>
+  <child link="lidar"/>
+  <origin xyz="0 0 0.3" rpy="0 0 0"/>
+</joint>
+
 
   <!-- IMU Sensor -->
   <link name="imu_link">
