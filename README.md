@@ -71,6 +71,7 @@ ros2 launch drive display.launch.py
 To spawn the robot in an empty Gazebo world, run:
 
 ```bash
+export IGN_GAZEBO_RESOURCE_PATH=$IGN_GAZEBO_RESOURCE_PATH:(path to your workspace)/src/drive/models
 ros2 launch drive gazebo.launch.py
 ```
 
