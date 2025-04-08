@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 import os
 
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import ExecuteProcess
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    urdf_path = '/home/kush/nav2_ws/src/drive/models/drive/urdf/drive.urdf'
+    # Get the absolute path to the drive package
+    drive_share_dir = get_package_share_directory('drive')
+    urdf_path = os.path.join(drive_share_dir, 'models', 'drive', 'urdf', 'drive.urdf')
 
     return LaunchDescription([
         # Launch Ignition Gazebo with empty world
@@ -38,4 +41,3 @@ def generate_launch_description():
             output='screen'
         ),
     ])
-

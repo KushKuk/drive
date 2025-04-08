@@ -2,9 +2,8 @@
 <robot name="drive">
 <link name="base_link">
 <inertial>
-<!-- <origin rpy="0 0 0" xyz="0.0813975388640472 0.349730166585041 0.745233391827634"/> -->
-<origin rpy="0 0 0" xyz="0 0 0.2"/>
-<mass value="12.720238406316"/>
+<origin rpy="0 0 0" xyz="0 0 0"/>
+<mass value="1"/>
 <inertia ixx="0.261391224287362" ixy="0.00262186748821055" ixz="1.91697306700848E-16" iyy="0.843990123685326" iyz="5.10428306001413E-17" izz="0.664922609272974"/>
 </inertial>
 <visual>
@@ -46,7 +45,7 @@
 </collision>
 </link>
 <joint name="bogie_front_left_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="3.1416 0 1.4079" xyz="-0.43217 -1.0151 0"/>
 <parent link="base_link"/>
 <child link="bogie_front_left"/>
@@ -80,7 +79,7 @@
 </collision>
 </link>
 <joint name="wheel_1_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="3.1416 1.3751 1.5708" xyz="0 0 0.11198"/>
 <parent link="bogie_front_left"/>
 <child link="wheel_1"/>
@@ -109,7 +108,7 @@
 </collision>
 </link>
 <joint name="bogie_middle_left_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="-3.1416 0 1.5708" xyz="0.13025 -1.0151 0"/>
 <parent link="base_link"/>
 <child link="bogie_middle_left"/>
@@ -143,7 +142,7 @@
 </collision>
 </link>
 <joint name="wheel_2_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="0 0 -1.5708" xyz="0 0 0.111977638143316"/>
 <parent link="bogie_middle_left"/>
 <child link="wheel_2"/>
@@ -172,7 +171,7 @@
 </collision>
 </link>
 <joint name="rocker_left_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="3.1158 0 1.5708" xyz="0.56095 -0.97013 -0.019803"/>
 <parent link="base_link"/>
 <child link="rocker_left"/>
@@ -206,7 +205,7 @@
 </collision>
 </link>
 <joint name="wheel_3_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="0 0 1.5708" xyz="0 0 0.112408206593219"/>
 <parent link="rocker_left"/>
 <child link="wheel_3"/>
@@ -235,7 +234,7 @@
 </collision>
 </link>
 <joint name="bogie_front_right_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="3.1416 0 -1.5708" xyz="-0.43066 -0.47513 -0.0023177"/>
 <parent link="base_link"/>
 <child link="bogie_front_right"/>
@@ -269,7 +268,7 @@
 </collision>
 </link>
 <joint name="wheel_4_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="0 0 -1.5708" xyz="0 0 0.1125"/>
 <parent link="bogie_front_right"/>
 <child link="wheel_4"/>
@@ -298,7 +297,7 @@
 </collision>
 </link>
 <joint name="bogie_middle_right_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="-2.4656 0 -1.5708" xyz="0.13176 -0.47513 -0.0023177"/>
 <parent link="base_link"/>
 <child link="bogie_middle_right"/>
@@ -332,7 +331,7 @@
 </collision>
 </link>
 <joint name="wheel_5_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="0 0 -1.5708" xyz="0 0.0703909178023914 0.0877574423677957"/>
 <parent link="bogie_middle_right"/>
 <child link="wheel_5"/>
@@ -361,7 +360,7 @@
 </collision>
 </link>
 <joint name="rocker_right_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="3.10403771392678 0 -1.5708" xyz="0.565118575030691 -0.520131514258346 -0.0143396560229379"/>
 <parent link="base_link"/>
 <child link="rocker_right"/>
@@ -395,7 +394,7 @@
 </collision>
 </link>
 <joint name="wheel_6_joint" type="continuous">
-<dynamics damping="0.1"/> 
+<dynamics damping="0.5"/> 
 <origin rpy="3.1416 -0.6966 -1.5708" xyz="0 -0.00842737343770561 0.111989526422662"/>
 <parent link="rocker_right"/>
 <child link="wheel_6"/>
@@ -410,8 +409,8 @@
 <geometry>
 <cylinder length="0.1" radius="0.05"/>
 </geometry>
-<material>
-<color rgba="0.1 0.1 0.1 1"/>
+<material name="lidar_color">
+<color rgba="0 0 0 0"/>
 </material>
 </visual>
 <collision>
