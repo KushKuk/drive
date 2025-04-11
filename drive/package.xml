@@ -23,6 +23,9 @@
   <depend>joint_state_publisher_gui</depend>
   <depend>gazebo_ros</depend>
 
+<exec_depend>ros_ign_gazebo</exec_depend>
+<exec_depend>ign_gazebo</exec_depend>
+
   <export>
     <build_type>ament_cmake</build_type>
     <architecture_independent/>

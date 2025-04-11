@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="nav2_test_world">
+
+    <!-- Ground plane -->
+<model name="ground_plane">
+  <static>true</static>
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <plane>
+          <normal>0 0 1</normal>
+          <size>100 100</size>
+        </plane>
+      </geometry>
+      <surface>
+        <contact>
+          <collide_without_contact>true</collide_without_contact>
+        </contact>
+      </surface>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <plane>
+          <normal>0 0 1</normal>
+          <size>100 100</size>
+        </plane>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/Grey</name>
+        </script>
+      </material>
+    </visual>
+  </link>
+</model>
+
+<!-- Sun light -->
+<light type="directional" name="sun">
+  <cast_shadows>true</cast_shadows>
+  <pose>0 0 10 0 0 0</pose>
+  <diffuse>1 1 1 1</diffuse>
+  <specular>0.1 0.1 0.1 1</specular>
+  <attenuation>
+    <range>1000</range>
+    <constant>0.9</constant>
+    <linear>0.01</linear>
+    <quadratic>0.001</quadratic>
+  </attenuation>
+  <direction>-0.5 0.5 -1</direction>
+</light>
+
+
+    <!-- Room walls -->
+    <model name="wall_north">
+      <pose>0 5 1 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="wall_south">
+      <pose>0 -5 1 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>10 0.2 2</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="wall_east">
+      <pose>5 0 1 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.2 10 2</size></box></geometry>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.2 10 2</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="wall_west">
+      <pose>-5 0 1 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.2 10 2</size></box></geometry>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.2 10 2</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Obstacle boxes -->
+    <model name="box1">
+      <pose>1 1 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1 1 1</size></box></geometry>
+          <material><ambient>0.6 0.2 0.2 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>1 1 1</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="box2">
+      <pose>-2 -1.5 0.5 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.8 0.8 1</size></box></geometry>
+          <material><ambient>0.2 0.4 0.8 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.8 0.8 1</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="box3">
+      <pose>0 -3 0.3 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+          <material><ambient>0.1 0.9 0.3 1</ambient></material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+        </collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>
